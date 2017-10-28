@@ -10,7 +10,7 @@ while lastGuessWas != 'c':
     guess = (high+low1)/2
     print "Is your secret number " + str(guess) + "?"
     lastGuessWas = raw_input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. ")
-    if lastGuessWas != 'l' and lastGuessWas != 'h' and lastGuessWas != 'c':
+    if lastGuessWas not in ['l', 'h', 'c']:
         print 'Sorry, I did not understand your input.'
     elif lastGuessWas == 'l':
         low1 = guess
